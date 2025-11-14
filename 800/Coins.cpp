@@ -5,23 +5,34 @@ int main() {
     int t ;
     cin>>t;
     while(t--) {
-       int m , n;
-       cin>>m>>n;
-    //    int x = n, i = 1;;
-    // //    bool y = 1;
-    // bool flg = false;
-    //    while (x <= m) {
-    //     x = (n*i);
-    //     i++;
-    //     if ((m-x)%2 == 0) {
-    //         cout<<"YES";
-    //         flg = true;
-    //         break;
-    //     }
-    //    }
-       if ((m-(n*((int)(m/n))))%2)
-       cout<<"NO";
-       else cout<<"YES";
+       int k , n;
+       cin>>n>>k;
+        // if (n%2 == 0 || k%2) cout<<"YES";
+        // else {
+            //     bool flg = false;
+            // while(n>=k) {
+            //     n-=k;
+            //     if (n%2 == 0) {
+            //         cout<<"YES";
+            //         flg = true;
+            //         break;
+            //     }
+            // }
+            // if (!flg) cout<<"NO";
+            // if ((k%2!=0) && k <= n) cout<<"YES";
+            // else cout<<"NO";
+            bool flg = false;
+            for (int i =0 ; i < 2; ++i) {
+                if ((n-i*k) >= 0 && (n-i*k)%2 == 0) {
+                    cout<<"YES";
+                    flg = true;
+                    break;
+                }
+            }
+            if (!flg) cout<<"NO";
+
+
+        // }
         cout<<endl;
     }
     return 0;

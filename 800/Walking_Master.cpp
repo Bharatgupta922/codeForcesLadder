@@ -7,22 +7,29 @@ int32_t main() {
     cin>>t;
     while(t--) {
         int a,b,c,d;
-        cin>>c>>d>>a>>b;
+        cin>>a>>b>>c>>d;
         // int p  = a-c;
         // int q = b-d;
-        if (c < (a-(b-d))) {
-            cout<<"-1";
+        // if (c < (a-(b-d))) {
+        //     cout<<"-1";
+        // }
+
+if (c <= a+d-b && b <= d) {
+            cout<<(d-b)+(a-c) + (d-b);
         }
         //  else if (p > q) {
         //     cout<<"-1";
         // } 
         else {
-            int m = b-d;
-            int ans = 0;
-            ans += m;
-            ans += (c - (a-m));
-            cout<<ans;
+            cout<<"-1";
+            // int m = b-d;
+            // int ans = 0;
+            // ans += m;
+            // ans += (c - (a-m));
+            // cout<<ans;
         }
+
+
         cout<<endl;
     }
     return 0;

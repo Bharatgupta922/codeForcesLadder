@@ -8,21 +8,16 @@ int main() {
         int n;
         cin>>n;
         string s;
-        for (int i =0; i < n ; ++i)
-        {
-            char x;
-            cin>>x;
-            s+=x;
+        cin>>s;
+        if (s.find("...")!=string::npos) {
+            cout<<"2";
+        } else {
+            int count = 0;
+            for (auto x : s)
+            if (x == '.')
+            count++;
+        cout<<count;
         }
-        int i =0, j = 0, cnt = 0;
-        while(i<n && j < n) {
-            while(s[i] == '#') ++i;
-            j = i;
-            while(j < n && s[j] == '.') ++j;
-            cnt += ((j-i) >= 2 ? 2 : (j - i));
-            i = j;
-        }
-        cout<<cnt;
         cout<<endl; 
     }
     return 0;

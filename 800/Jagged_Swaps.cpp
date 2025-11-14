@@ -16,20 +16,22 @@ int main() {
         }
         if (isSorted) cout<<"YES";
         else if (a[0] != 1) cout<<"NO";
-        else {
-            for (int i =1; i < n-1 ; ++i) {
-                if (a[i] > a[i-1] && a[i] > a[i+1]) {
-                    swap(a[i], a[i+1]);
-                }
-            }
-            isSorted = true;
-            for (int i =1; i < n ; ++i)
-                if (a[i] < a[i-1]) {
-                isSorted = false;
-                break;
-                }
-            isSorted? cout<<"YES":cout<<"NO";
-        }
+        else cout<<"YES";
+        // else {
+        //     for (int i =1; i < n-1 ;) {
+        //         if (a[i] > a[i+1]) {
+        //             swap(a[i], a[i+1]);
+        //             i+=2;
+        //         } else ++i;
+        //     }
+        //     isSorted = true;
+        //     for (int i =1; i < n ; ++i)
+        //         if (a[i] < a[i-1]) {
+        //         isSorted = false;
+        //         break;
+        //         }
+        //     isSorted? cout<<"YES":cout<<"NO";
+        // }
         cout<<endl; 
     }
     return 0;
